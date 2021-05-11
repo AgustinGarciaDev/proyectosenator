@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Senate</title>
+   <link rel="stylesheet" href="./style/style.css" />
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
+</head>
+
+<body id="senate">
+   <header>
+      <div class="logo_and_text">
+         <a href="./index.html">
+            <img src="./img/Task 2 Home.png" alt="logo de la empresa" />
+         </a>
+         <a href="#mailto:info@tgif.net"><i class="bi bi-envelope"></i> info@tgif.net</a>
+      </div>
+      <nav class=" navbar-expand-lg navbar-light bg-light border border-dark">
+         <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+               aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+               <ul class="navbar-nav">
+                  <li class="nav-item">
+                     <a class="nav-link active text-primary" aria-current="page" href="./index.html">Home</a>
+                  </li>
+                  <li class="nav-item dropdown ">
+                     <a class="nav-link dropdown-toggle text-primary" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Congress
+                     </a>
+                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="./senate.html">Senator</a></li>
+                        <li><a class="dropdown-item" href="./house.html">House</a></li>
+
+                     </ul>
+                  </li>
+                  <li class="nav-item dropdown ">
+                     <a class="nav-link dropdown-toggle text-primary" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Attendance
+                     </a>
+                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li>
+                           <a class="dropdown-item" href="./attendance_senate.html">Senator</a>
+                        </li>
+                        <li>
+                           <a class="dropdown-item" href="./attendance_house.html">House</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="nav-item dropdown ">
+                     <a class="nav-link dropdown-toggle text-primary" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Loyalty
+                     </a>
+                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li>
+                           <a class="dropdown-item" href="./loyalty_senate.html">Senator</a>
+                        </li>
+                        <li>
+                           <a class="dropdown-item" href="./loyalty_house.html">House</a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+   </header>
+   <main>
+      <div class="col-sm-6 m-3">
+         <h2>Senators</h2>
+         <p>
+            First convened in 1789, the composition and powers of the Senate are
+            established in Article One of the U.S. Constitution. Each state is
+            represented by two senators, regardless of population, who serve
+            staggered six-year terms. The Senate has several exclusive powers not
+            granted to the House, including consenting to treaties as a
+            precondition to their ratification and consenting to or confirming
+            appointments of Cabinet secretaries, federal judges, other federal
+            executive officials, military officers, regulatory officials,
+            ambassadors, and other federal uniformed officers, as well as trial of
+            federal officials impeached by the House.
+         </p>
+      </div>
+
+      <form id="sendData" class="p-2 m-4">
+         <label>
+            State
+            <select name="state" id="select_state" onchange="getSelectCheckboxValues()">
+               <option id="viewState" value="stateView">View States</option>
+            </select>
+         </label>
+         <label>
+            D
+            <input type="checkbox" name="party" value="D" id="D" onchange="getSelectCheckboxValues()" />
+         </label>
+         <label>
+            R
+            <input type="checkbox" name="party" value="R" id="R" onchange="getSelectCheckboxValues()" />
+         </label>
+         <label>
+            ID
+            <input type="checkbox" name="party" value="ID" id="ID" onchange="getSelectCheckboxValues()" />
+         </label>
+      </form>
+      <div class="col-11">
+         <table class="shadow p-3 mb-5 bg-body rounded p-2 m-4 table">
+            <thead>
+               <tr>
+                  <th>Full name</th>
+                  <th>Party</th>
+                  <th>State</th>
+                  <th>years in the office</th>
+                  <th>Total votes</th>
+               </tr>
+            </thead>
+            <tbody id="data_senate"></tbody>
+         </table>
+      </div>
+   </main>
+   <footer class="col-12 bg-secondary text-white text-center p-2 mt-2">
+      <h6>2016 TGIF | All Rights Reserved</h6>
+   </footer>
+
+   <script src="./js/datebase.js"></script>
+   <script src="./js/main.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+table {
+  text-align: center;
+  max-width: 70vw;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.logo_and_text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6vw;
+}
+
+.item {
+  padding-left: 10px;
+}
+tr td {
+  width: 100px;
+}
+
+.bloque_text {
+  display: none;
+}
+
+.bloque_text_btn {
+  display: block;
+}
